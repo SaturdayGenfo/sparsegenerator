@@ -8,6 +8,7 @@ LAWS = [
     ('gamma', 'Gamma'),
     ('alpha_stable', 'Alpha Stable')
 ]
+
 class LawForm(forms.Form):
     law_name = forms.ChoiceField(choices=LAWS, widget=forms.RadioSelect())
 
@@ -23,3 +24,9 @@ class Laplace(forms.Form):
 class Gamma(forms.Form):
     shape = forms.FloatField(min_value=0)
     scale = forms.FloatField(min_value=0)
+
+class SimulationForm(forms.Form):
+    operator = forms.CharField()
+    n = forms.IntegerField(min_value=1)
+    T = forms.FloatField(min_value=0)
+    h = forms.FloatField(min_value=0)
