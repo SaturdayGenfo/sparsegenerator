@@ -1,0 +1,13 @@
+{% extends 'generator/index.html' %}
+
+{% block content %}
+<h4>Select parameters of the {{ law }} distribution : </h4>
+<form method="POST" class="post-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="button">
+        <button type="submit" class="buttontext">NEXT</button>
+      </div>
+
+</form>
+{% endblock %}

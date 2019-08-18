@@ -1,0 +1,31 @@
+{% extends 'generator/index.html' %}
+
+{% block content %}
+<h4>Select white Levy noise statistics :</h4>
+<form method="POST" >
+      {% csrf_token %}
+      <p>
+      <ul>
+    <li><label for="id_law_name_0"><input type="radio" name="law_name" value="gaussian" required id="id_law_name_0" />
+ Gaussian</label>
+
+</li>
+    <li><label for="id_law_name_1"><input type="radio" name="law_name" value="laplace" required id="id_law_name_1" />
+ Laplace</label>
+
+</li>
+    <li><label for="id_law_name_2"><input type="radio" name="law_name" value="gamma" required id="id_law_name_2" />
+ Gamma</label>
+
+</li>
+    <li><label for="id_law_name_3"><input type="radio" name="law_name" value="alpha_stable" required id="id_law_name_3" />
+ Alpha Stable</label>
+
+</li>
+</ul></p>
+      <div class="button">
+        <button type="submit" class="text-right">NEXT</button>
+      </div>
+
+</form>
+{% endblock %}

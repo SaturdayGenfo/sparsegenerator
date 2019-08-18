@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Merriweather&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href = "{% static 'style.css' %}" />
+</head>
+
+<body>
+  <span class="title">Sparse<br/>Stochastic<br/>Process<br/>Generator</span>
+  <div class='banner'></div>
+  <div class='block'>
+  {% block content %}
+  {% endblock %}
+  </div>
+</body>
+
+</html>
