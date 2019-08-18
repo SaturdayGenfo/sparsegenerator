@@ -1,0 +1,67 @@
+/* MacBook */
+body
+{
+background: #FFFFFF;
+}
+
+/* Sparse Stochastic Process Generator */
+.title
+{
+position: absolute;
+width: 219px;
+height: 232px;
+left: 153px;
+top: 40px;
+
+font-family: Merriweather;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 30px;
+
+color: #000000;
+}
+
+.banner
+{
+position: absolute;
+width: 888px;
+height: 170px;
+left: 301px;
+top: 10px;
+background-image: url("bk.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-position: center;
+
+}
+
+.button
+{
+position: absolute;
+width: 293px;
+height: 54px;
+left: 851px;
+top: 500px;
+
+background: #27AE60;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.buttontext
+{
+position: absolute;
+width: 134px;
+height: 30px;
+left: 80px;
+top: 10px;
+
+font-family: Arvo;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+
+color: #FFFFFF;
+}
