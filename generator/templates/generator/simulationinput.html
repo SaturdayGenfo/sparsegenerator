@@ -4,7 +4,7 @@
 <h4>Simulation Details: </h4>
 <form method="POST" class="post-form">
       {% csrf_token %}
-      {{ form.as_p }}
+      {{ form.as_table }}
       <div class="button">
         <button type="submit" class="buttontext">NEXT</button>
       </div>

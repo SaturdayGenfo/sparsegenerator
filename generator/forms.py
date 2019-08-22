@@ -26,7 +26,9 @@ class Gamma(forms.Form):
     scale = forms.FloatField(min_value=0)
 
 class SimulationForm(forms.Form):
-    operator = forms.CharField()
-    n = forms.IntegerField(min_value=1)
-    T = forms.FloatField(min_value=0)
-    h = forms.FloatField(min_value=0)
+    p = forms.CharField(label="P")
+    q = forms.CharField(label="Q")
+    n = forms.IntegerField(min_value=1, label="Approximation quality n")
+    T = forms.FloatField(min_value=0, label="Simulation interval T")
+    h = forms.FloatField(min_value=0, label="Step size h")
+    numsim = forms.IntegerField(min_value=1, max_value=10000, label="Number of simulations")

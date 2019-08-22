@@ -50,4 +50,4 @@ class L_spline():
         s = self.L.discrete_inverse(u)
         if show:
             plt.step(grid, s, where='post', lw = 1.5)
-        return s
+        return grid, s

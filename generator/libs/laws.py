@@ -4,7 +4,8 @@ from scipy.stats import levy_stable
 class gaussian():
 
     def __init__(self, params):
-        self.mu, self.sigma = params
+        self.mu = 0
+        self.sigma = params[0]
 
     def lambda_effect(self, lmda):
         self.mu = self.mu/lmda
@@ -18,6 +19,7 @@ class gaussian():
 class alpha_stable():
 
     def __init__(self, params):
+        params = [params[0], 0, 0, 1]
         self.params = params
 
     def lambda_effect(self, lmda):
@@ -36,7 +38,8 @@ class alpha_stable():
 class laplace():
 
     def __init__(self, params):
-        self.mu, self.b = params
+        self.mu = 0
+        self.b = params[0]
         self.lmda = 1
 
     def sample(self):
