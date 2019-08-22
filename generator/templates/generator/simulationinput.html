@@ -4,9 +4,9 @@
 <h4>Simulation Details: </h4>
 <form method="POST" class="post-form">
       {% csrf_token %}
-      {{ form.as_table }}
+      {{ form.as_p }}
       <div class="button">
-        <button type="submit" class="buttontext">NEXT</button>
+        <button type="submit" class="buttontext">GENERATE</button>
       </div>
 
 </form>

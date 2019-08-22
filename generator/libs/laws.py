@@ -59,7 +59,7 @@ class gamma():
         self.alpha, self.beta = params
 
     def lambda_effect(self, lmda):
-        self.alpha /= self.lmda
+        self.alpha /= lmda
 
     def jumps(self, N):
         return [np.random.gamma(self.alpha, 1.0/self.beta) for i in range(N)]

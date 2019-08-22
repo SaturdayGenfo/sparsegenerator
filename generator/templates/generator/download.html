@@ -1,0 +1,11 @@
+{% extends 'generator/index.html' %}
+{% load static %}
+
+
+{% block content %}
+<a href= "{% static 'data.csv' %}">DOWNLOAD</a>
+<div class="center">
+<img class="plot" src="{% static 'fig.png' %}"/>
+</div>
+
+{% endblock %}
