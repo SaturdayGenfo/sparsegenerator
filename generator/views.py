@@ -3,8 +3,9 @@ from django.http import HttpResponse
 from .forms import LawForm, Gaussian, Laplace, Alpha, Gamma, SimulationForm
 from .libs import white_noise, loperator, lspline
 import matplotlib.pyplot as plt
-from matplotlib.backends.backend_agg import FigureCanvasAgg
-import io
+import numpy as np
+import os
+
 
 LAWS = {
     'gaussian' :  'Gaussian',
@@ -54,21 +55,25 @@ def simu(request, law_name, params):
             DATA = []
             numsim = int(form.cleaned_data['numsim'])
 
-            s.sample(T)
-            grid, dt = s.get_grid_samples(T, h, show=False)
+            for _ in range(numsim):
+                s.sample(T)
+                grid, dt = s.get_grid_samples(T, h, show=False)
+                DATA.append(dt)
+            dir = os.path.join("generator", "static")
+            np.savetxt(os.path.join(dir , "data.csv"), DATA)
+
 
             plt.style.use('seaborn-poster')
-            fig, ax = plt.subplots()
 
-            ax.step(grid, dt, where='post', lw = 1.5)
-            canvas = FigureCanvasAgg(fig)
-            buf = io.BytesIO()
-            plt.savefig(buf, format='png')
-            plt.close(fig)
-            response = HttpResponse(buf.getvalue(), content_type='image/png')
-            return response
+            plt.step(grid, dt, where='post', lw = 1.5)
+            plt.savefig(os.path.join(dir, "fig.png"), format='png')
+
+            return redirect('download')
 
     else:
         form = SimulationForm()
     print(law_name, params)
     return render(request, 'generator/simulationinput.html', {'form':form})
+
+def download(request):
+    return render(request, 'generator/download.html')
