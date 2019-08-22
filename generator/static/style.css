@@ -26,13 +26,13 @@ label
 position: absolute;
 width: 10%;
 height: 12%;
-left: 12%;
-top: 8%;
+left: 13%;
+top: 6%;
 
 font-family: Merriweather;
 font-style: normal;
 font-weight: normal;
-font-size: 170%;
+font-size: 180%;
 line-height: 30px;
 
 color: #000000;
@@ -42,9 +42,9 @@ color: #000000;
 {
 position: absolute;
 width: 70%;
-height: 28%;
+height: 19%;
 left: 25%;
-top: 4%;
+top: 3%;
 background-image: url("bk.jpg");
 background-size:cover;
 background-repeat:no-repeat;
