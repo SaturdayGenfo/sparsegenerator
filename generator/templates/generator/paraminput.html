@@ -1,13 +1,35 @@
 {% extends 'generator/index.html' %}
 
 {% block content %}
-<h4>Select parameters of the {{ law }} distribution : </h4>
+<h4>Select parameters of the white noise : </h4>
 <form method="POST" class="post-form">
       {% csrf_token %}
-      {{ form.as_p }}
-      <div class="button">
-        <button type="submit" class="buttontext">NEXT</button>
-      </div>
+
+      <div class="row align-middle">
+        <div class="col-sm-5">
+        Fix the parameters of the {{ law }} distribution.
+        </div>
+
+        <div class="col-sm-4">
+
+          {{ form.as_p }}
+
+        </div>
+        </div>
+        <div class="row">
+
+          <div class="col-sm-5">
+           </div>
+           <div class="col-sm-5">
+             <div>
+               <button type="submit" class="button-text">NEXT</button>
+             </div>
+            </div>
+           </div>
+
+
+
+
 
 </form>
 {% endblock %}

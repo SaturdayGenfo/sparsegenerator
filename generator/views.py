@@ -46,11 +46,13 @@ def simu(request, law_name, params):
             L = loperator.Operator(P, Q)
             s = lspline.L_spline(L, w)
 
-            n = float(form.cleaned_data['n'])
-            s.set_lambda(n)
+
+
 
             T = float(form.cleaned_data['T'])
             h = float(form.cleaned_data['h'])
+
+            s.set_lambda(np.ceil(1/h)*5)
 
             DATA = []
             numsim = int(form.cleaned_data['numsim'])

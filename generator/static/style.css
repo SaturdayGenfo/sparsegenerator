@@ -18,7 +18,7 @@ label
 
 .block{
     margin-left: 30%;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 /* Sparse Stochastic Process Generator */
 .title
@@ -54,7 +54,7 @@ background-position: center;
 
 .plot{
     width: 50%;
-    
+
 }
 
 a{
@@ -79,8 +79,8 @@ button {
     border: none;
     padding: 1rem 2rem;
     position: absolute;
-    left: 60%;
-    top: 76%;
+    left: 70%;
+    top: 60%;
     text-decoration: none;
     background: #27AE60;
     color: #ffffff;

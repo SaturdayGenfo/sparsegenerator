@@ -3,29 +3,56 @@
 {% block content %}
 <h4>Select white Levy noise statistics :</h4>
 <form method="POST" >
-      {% csrf_token %}
-      <p>
-      <ul>
-    <li><label for="id_law_name_0"><input type="radio" name="law_name" value="gaussian" required id="id_law_name_0" />
- Gaussian</label>
+    {% csrf_token %}
 
-</li>
-    <li><label for="id_law_name_1"><input type="radio" name="law_name" value="laplace" required id="id_law_name_1" />
- Laplace</label>
 
-</li>
-    <li><label for="id_law_name_2"><input type="radio" name="law_name" value="gamma" required id="id_law_name_2" />
- Gamma</label>
+        <div class="row align-middle">
 
-</li>
-    <li><label for="id_law_name_3"><input type="radio" name="law_name" value="alpha_stable" required id="id_law_name_3" />
- Alpha Stable</label>
+                <div class="col-sm-5">
+                <p>
+                Choose the infinitely divisible law defining the white noise process.
+                </p>
+                </div>
 
-</li>
-</ul></p>
-      <div class="button">
-        <button type="submit" class="text-right">NEXT</button>
-      </div>
+                <div class="col-sm-4">
+
+                <p class="">
+                <ul>
+                    <li><label for="id_law_name_0"><input type="radio" name="law_name" value="gaussian" required    id="id_law_name_0" />  Gaussian</label>
+
+                    </li>
+                    <li><label for="id_law_name_1"><input type="radio" name="law_name" value="laplace" required id="id_law_name_1" />  Laplace</label>
+
+                    </li>
+                    <li><label for="id_law_name_2"><input type="radio" name="law_name" value="gamma" required id="id_law_name_2" />  Gamma</label>
+
+                    </li>
+                    <li><label for="id_law_name_3"><input type="radio" name="law_name" value="alpha_stable" required id="id_law_name_3" />  Alpha Stable</label>
+
+                    </li>
+                </ul>
+                </p>
+
+
+                </div>
+
+       </div>
+
+       <div class="row">
+
+         <div class="col-sm-5">
+          </div>
+          <div class="col-sm-5">
+            <div>
+              <button type="submit" class="text-right">NEXT</button>
+            </div>
+           </div>
+          </div>
+
+
 
 </form>
+
+
+
 {% endblock %}
