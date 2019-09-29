@@ -10,7 +10,10 @@
 
                 <div class="col-sm-4">
                 <p>
-                Choose the infinitely divisible law defining the white noise process.
+                Choose the infinitely divisible law defining the white noise $w$ . The distribution will correspond to the law of 
+                $$
+                \langle \mathrm{rect}_{[0, 1]}, w \rangle
+                $$
                 </p>
                 </div>
 
@@ -18,7 +21,7 @@
 
                 <p class="">
                 <ul>
-                    <li><label for="id_law_name_0"><input type="radio" name="law_name" value="gaussian" required    id="id_law_name_0" />  Gaussian</label>
+                    <li><label for="id_law_name_0"><input type="radio" name="law_name" checked value="gaussian" required    id="id_law_name_0" />  Gaussian</label>
 
                     </li>
                     <li><label for="id_law_name_1"><input type="radio" name="law_name" value="laplace" required id="id_law_name_1" />  Laplace</label>

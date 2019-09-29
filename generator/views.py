@@ -61,7 +61,7 @@ def simu(request, law_name, params):
                 s.sample(T)
                 grid, dt = s.get_grid_samples(T, h, show=False)
                 DATA.append(dt)
-            dir = os.path.join("generator", "static")
+            dir = os.path.join(os.getcwd(), "generator", "static")
             np.savetxt(os.path.join(dir , "data.csv"), DATA)
 
 
@@ -79,4 +79,4 @@ def simu(request, law_name, params):
     return render(request, 'generator/simulationinput.html', {'form':form})
 
 def download(request):
-    return render(request, 'generator/download.html')
+    return render(request, 'generator/download.html', {"figure": os.path.join(os.getcwd(), "generator", "static") + "fig.png", "data": os.path.join(os.getcwd(), "generator", "static") + "data.csv"})
