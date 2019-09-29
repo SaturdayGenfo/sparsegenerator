@@ -3,9 +3,17 @@
 
 
 {% block content %}
-<a href= "{% static 'data.csv' %}">DOWNLOAD</a>
-<div class="center">
-<img class="plot" src="{% static 'fig.png' %}"/>
-</div>
+<div class=row>
 
+  <div class="col-sm-6">
+    <img class="plot" src="{% static 'fig.png' %}"/>
+  </div>
+
+  <div class="col-sm-3">
+
+    <a class="download-button" href= "{% static 'data.csv' %}">DOWNLOAD</a>
+
+  </div>
+
+</div>
 {% endblock %}

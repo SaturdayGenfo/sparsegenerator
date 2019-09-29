@@ -69,6 +69,7 @@ def simu(request, law_name, params):
 
             plt.step(grid, dt, where='post', lw = 1.5)
             plt.savefig(os.path.join(dir, "fig.png"), format='png')
+            plt.close()
 
             return redirect('download')
 
